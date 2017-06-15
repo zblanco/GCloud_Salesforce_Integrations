@@ -14,7 +14,7 @@ The goal is to build basic demos here that utilize Google Cloud Services in Sale
 	* May set up a hook to an external service to convert audio or get audio metadata as it must be referenced in the request body
 	* Want this clean enough that it can be easily used to transcribe voicemails/phone calls etc.
 3. [Cloud Storage](https://cloud.google.com/storage/docs/): **NOT STARTED**
-	* If possible, utilize the Node.js SDK as a static resource for use in Lightning/Javascript
+	* If possible, utilize an SDK as a static resource to handle the Cloud Storage actions, if not use the JSON API from Javascript client-side in Lightning to do it.
 	* Will mostly revolve around building Lightning components that supply a UI for file storage
 	* The file storage UI will be re-used and built on to use other services such as Vision and Speech
 	* I'm a total noob at Lightning, so the UI will probably be only for guiding the rest of the development
