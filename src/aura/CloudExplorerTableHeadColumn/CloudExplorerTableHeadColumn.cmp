@@ -1,0 +1,8 @@
+<aura:component >
+	<aura:attribute name="columnName" type="String"/>
+	
+	<th class="slds-is-sortable" scope="col">
+        <div class="slds-truncate" >{!v.columnName}</div>
+    </th>
+    
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component description="A page Header for the Cloud_Explorer App"
+				implements="flexipage:availableForAllPageTypes">
+	
+	<aura:attribute description="Dynamic Title"
+					name="title" type="String" access="global" default="Cloud Explorer" />
+
+	<div class="slds">
+        <div class="slds-page-header">
+        	<p class="slds-page-header__title" title="{!v.title}">{!v.title}</p>
+        </div>
+    </div>
+
+</aura:component>
