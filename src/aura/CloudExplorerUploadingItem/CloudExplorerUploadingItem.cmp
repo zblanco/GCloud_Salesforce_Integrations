@@ -1,0 +1,30 @@
+<aura:component >
+	<aura:attribute name="storageName" type="String" default="testStorageName"/>
+	<aura:attribute name="uploadProgress" type="String" default="25%"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<div class="demo-only" style="width: 30rem;">
+		<article class="slds-tile slds-media">
+	    
+	    <div class="slds-media__figure">
+	    	<span class="slds-icon_container" title="description of icon when needed">
+	        	<lightning:icon class="slds-button__icon slds-button__icon_large" iconName="doctype:attachment" />
+	    	</span>
+	    </div>
+
+	    <div class="slds-media__body">
+	    	<h3 class="slds-truncate" title="Salesforce UX"><a href="javascript:void(0);">storageName</a></h3>
+	    	<div class="slds-tile__detail slds-text-body_small">
+		        <div class="slds-progress-bar slds-progress-bar_medium" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{!v.uploadProgress}" role="progressbar">
+					<span class="slds-progress-bar__value" style="{!'width: ' + v.uploadProgress}">
+						<span class="slds-assistive-text">Progress: {!uploadProgress}</span>
+					</span>
+				</div>
+	    	</div>
+	    </div>
+
+	  </article>
+	</div>
+
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Toggles Selection of Items">
+	<aura:attribute name="state" type="Boolean"/>
+</aura:event>

@@ -1,0 +1,21 @@
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes"
+				controller="GoogleCloudStorageController">
+
+	<aura:attribute name="itemSelectionState" description="Stores selection state of line items" type="Map" default="{}"/>
+	<aura:attribute name="isSelectionStateInit" type="Boolean" default="false"/>
+	<aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="storageItems" type="Cloud_Storage_Item__c[]" />
+	<aura:attribute name="itemsReady" type="Boolean" default="false"/>
+	<!-- <aura:attribute name="filesToUpload" type="Object" /> -->
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler name="change" value="itemsReady" action="{!c.initSelectionState}"/>
+
+	<aura:handler name="itemSelectionChange" event="c:CE_ItemSelectionChange" action="{!c.handleSelectionChange}"/>
+
+	<!-- <lightning:input type="file" label="Files" name="file" files="{!v.filesToUpload}" multiple="true" onchange="{! c.handleFilesChange }"> -->
+		<c:CloudExplorerHeader itemSelectionState="{!v.itemSelectionState}" />
+		<c:CloudExplorerTable storageItems="{!v.storageItems}" />
+	<!-- </lightning:input> -->
+
+</aura:component>

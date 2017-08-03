@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Sends selection state">
+	<aura:attribute name="itemId" type="Id"/>
+	<aura:attribute name="checkboxState" type="Boolean" required="true"/>
+</aura:event>

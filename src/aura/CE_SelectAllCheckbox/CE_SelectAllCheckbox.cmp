@@ -1,0 +1,22 @@
+<aura:component >
+
+	<aura:attribute name="checkboxState" type="Boolean" default="false"/>
+
+	<aura:registerEvent name="SelectAllEvent" type="c:CE_SelectAllChange"/>
+	
+	<aura:handler name="change" value="{!v.checkboxState}" action="{!c.handleBoxChange}" includeFacets="true"/>
+
+	<th scope="col" class="slds-text-align_center" style="width: 3.25rem;">
+		<div class="slds-th__action slds-th__action_form">
+			<span class="slds-checkbox">
+				<input type="checkbox" name="masterSelect" id="select-all-checkbox" value="on" onclick="{!c.toggleCheckbox}"/>
+				<label class="slds-checkbox__label" for="select-all-checkbox">
+					<ui:inputCheckbox aura:id="select-all-box" value="{!v.checkboxState}" />
+					<span class="slds-checkbox_faux"></span>
+					<span class="slds-form-element__label slds-assistive-text">Select All</span>
+				</label>
+			</span>
+		</div>
+	</th>
+
+</aura:component>
